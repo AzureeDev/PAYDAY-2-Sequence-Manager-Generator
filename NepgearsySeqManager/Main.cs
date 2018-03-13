@@ -46,7 +46,7 @@ namespace NepgearsySeqManager
             }
 
             System.IO.FileStream fs = (System.IO.FileStream)SaveSequenceDialog.OpenFile();
-
+            
             fs.Close();
         }
 
@@ -58,6 +58,54 @@ namespace NepgearsySeqManager
         private void contactToolStripMenuItem_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("http://www.steamcommunity.com/profiles/76561198045788203");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (sequenceNameTextBox.Text == "")
+            {
+                return;
+            }
+
+            GridSequences.Rows.Add(sequenceNameTextBox.Text);
+
+            ResetForm();
+        }
+
+        private void ResetForm()
+        {
+            sequenceNameTextBox.Text = "";
+            editableStateCheckBox.Checked = false;
+            triggableStateCheckBox.Checked = false;
+            materialConfigTextBox.Text = "";
+        }
+
+        private void TotalResetForm()
+        {
+            ResetForm();
+
+            GridSequences.Rows.Clear();
+            GridSequences.Refresh();
+        }
+
+        private void resetButton_Click(object sender, EventArgs e)
+        {
+            TotalResetForm();
+        }
+
+        private string GetSequenceName()
+        {
+            return sequenceNameTextBox.Text;
+        }
+
+        private bool GetEditableState()
+        {
+            return editableStateCheckBox.Checked;
+        }
+
+        private bool GetTriggableState()
+        {
+            return editableStateCheckBox.Checked;
         }
     }
 }

@@ -35,8 +35,6 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutThisToolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.xml_preview = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,26 +46,30 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.sequenceNameTextBox = new System.Windows.Forms.TextBox();
+            this.editableStateCheckBox = new System.Windows.Forms.CheckBox();
+            this.triggableStateCheckBox = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.materialConfigTextBox = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.GridSequences = new System.Windows.Forms.DataGridView();
+            this.sequence_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.resetButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.EditorTabs.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GridSequences)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.GridSequences);
             this.groupBox1.Controls.Add(this.EditorTabs);
             this.groupBox1.Location = new System.Drawing.Point(12, 10);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(338, 447);
+            this.groupBox1.Size = new System.Drawing.Size(691, 447);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sequence Editor";
@@ -119,31 +121,9 @@
             this.aboutThisToolToolStripMenuItem.Text = "About PD2 : SMG";
             this.aboutThisToolToolStripMenuItem.Click += new System.EventHandler(this.aboutThisToolToolStripMenuItem_Click);
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.xml_preview);
-            this.groupBox2.Location = new System.Drawing.Point(365, 10);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(338, 447);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "XML Preview";
-            // 
-            // xml_preview
-            // 
-            this.xml_preview.AcceptsTab = true;
-            this.xml_preview.Location = new System.Drawing.Point(7, 20);
-            this.xml_preview.Multiline = true;
-            this.xml_preview.Name = "xml_preview";
-            this.xml_preview.ReadOnly = true;
-            this.xml_preview.Size = new System.Drawing.Size(325, 421);
-            this.xml_preview.TabIndex = 0;
-            this.xml_preview.Text = "<table>\r\n<unit>\r\n</unit>\r\n</table>";
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Location = new System.Drawing.Point(0, 27);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(715, 463);
@@ -202,11 +182,11 @@
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.button2);
-            this.tabPage1.Controls.Add(this.textBox2);
+            this.tabPage1.Controls.Add(this.materialConfigTextBox);
             this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.checkBox2);
-            this.tabPage1.Controls.Add(this.checkBox1);
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.triggableStateCheckBox);
+            this.tabPage1.Controls.Add(this.editableStateCheckBox);
+            this.tabPage1.Controls.Add(this.sequenceNameTextBox);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -235,33 +215,33 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Sequence Name";
             // 
-            // textBox1
+            // sequenceNameTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(126, 7);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(186, 20);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.sequenceNameTextBox.Location = new System.Drawing.Point(126, 7);
+            this.sequenceNameTextBox.Name = "sequenceNameTextBox";
+            this.sequenceNameTextBox.Size = new System.Drawing.Size(186, 20);
+            this.sequenceNameTextBox.TabIndex = 1;
+            this.sequenceNameTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // checkBox1
+            // editableStateCheckBox
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(9, 36);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(92, 17);
-            this.checkBox1.TabIndex = 2;
-            this.checkBox1.Text = "Editable State";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.editableStateCheckBox.AutoSize = true;
+            this.editableStateCheckBox.Location = new System.Drawing.Point(9, 36);
+            this.editableStateCheckBox.Name = "editableStateCheckBox";
+            this.editableStateCheckBox.Size = new System.Drawing.Size(92, 17);
+            this.editableStateCheckBox.TabIndex = 2;
+            this.editableStateCheckBox.Text = "Editable State";
+            this.editableStateCheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // triggableStateCheckBox
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(9, 59);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(70, 17);
-            this.checkBox2.TabIndex = 3;
-            this.checkBox2.Text = "Triggable";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.triggableStateCheckBox.AutoSize = true;
+            this.triggableStateCheckBox.Location = new System.Drawing.Point(9, 59);
+            this.triggableStateCheckBox.Name = "triggableStateCheckBox";
+            this.triggableStateCheckBox.Size = new System.Drawing.Size(70, 17);
+            this.triggableStateCheckBox.TabIndex = 3;
+            this.triggableStateCheckBox.Text = "Triggable";
+            this.triggableStateCheckBox.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -272,12 +252,12 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Material Config Path";
             // 
-            // textBox2
+            // materialConfigTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(126, 91);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(186, 20);
-            this.textBox2.TabIndex = 5;
+            this.materialConfigTextBox.Location = new System.Drawing.Point(126, 91);
+            this.materialConfigTextBox.Name = "materialConfigTextBox";
+            this.materialConfigTextBox.Size = new System.Drawing.Size(186, 20);
+            this.materialConfigTextBox.TabIndex = 5;
             // 
             // button2
             // 
@@ -287,12 +267,41 @@
             this.button2.TabIndex = 6;
             this.button2.Text = "Add Sequence";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // GridSequences
+            // 
+            this.GridSequences.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridSequences.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.sequence_name});
+            this.GridSequences.Location = new System.Drawing.Point(338, 42);
+            this.GridSequences.Name = "GridSequences";
+            this.GridSequences.Size = new System.Drawing.Size(347, 395);
+            this.GridSequences.TabIndex = 7;
+            // 
+            // sequence_name
+            // 
+            this.sequence_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.sequence_name.HeaderText = "Sequence";
+            this.sequence_name.Name = "sequence_name";
+            this.sequence_name.ReadOnly = true;
+            // 
+            // resetButton
+            // 
+            this.resetButton.Location = new System.Drawing.Point(491, 500);
+            this.resetButton.Name = "resetButton";
+            this.resetButton.Size = new System.Drawing.Size(75, 23);
+            this.resetButton.TabIndex = 3;
+            this.resetButton.Text = "Reset";
+            this.resetButton.UseVisualStyleBackColor = true;
+            this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(715, 535);
+            this.Controls.Add(this.resetButton);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
@@ -303,12 +312,11 @@
             this.groupBox1.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.EditorTabs.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GridSequences)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -322,18 +330,16 @@
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem contactToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutThisToolToolStripMenuItem;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox xml_preview;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TabControl EditorTabs;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox materialConfigTextBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.CheckBox triggableStateCheckBox;
+        private System.Windows.Forms.CheckBox editableStateCheckBox;
+        private System.Windows.Forms.TextBox sequenceNameTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
@@ -341,6 +347,9 @@
         private System.Windows.Forms.ToolStripMenuItem quitTheApplicationToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem version100ToolStripMenuItem;
+        private System.Windows.Forms.DataGridView GridSequences;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sequence_name;
+        private System.Windows.Forms.Button resetButton;
     }
 }
 
