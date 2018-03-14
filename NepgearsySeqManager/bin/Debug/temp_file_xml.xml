@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Generated with PAYDAY 2: Sequence Manager Generator-->
+<table>
+  <unit>
+    <sequence editable_state="true" triggable="true" name="'Sound_Trigger'">
+      <sound action="'play'" event="'ban_cx10_pre'" object="'g_obj'" />
+    </sequence>
+    <sequence editable_state="true" triggable="true" name="'MySequence1'">
+      <material_config name="'path/the/mat'" />
+    </sequence>
+  </unit>
+</table>

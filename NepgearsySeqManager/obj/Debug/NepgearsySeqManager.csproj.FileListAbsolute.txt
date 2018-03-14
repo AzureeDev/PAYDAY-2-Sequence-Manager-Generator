@@ -1,10 +1,11 @@
-C:\Users\timer\source\repos\NepgearsySeqManager\NepgearsySeqManager\bin\Debug\NepgearsySeqManager.exe.config
-C:\Users\timer\source\repos\NepgearsySeqManager\NepgearsySeqManager\bin\Debug\NepgearsySeqManager.exe
-C:\Users\timer\source\repos\NepgearsySeqManager\NepgearsySeqManager\bin\Debug\NepgearsySeqManager.pdb
 C:\Users\timer\source\repos\NepgearsySeqManager\NepgearsySeqManager\obj\Debug\NepgearsySeqManager.csprojResolveAssemblyReference.cache
 C:\Users\timer\source\repos\NepgearsySeqManager\NepgearsySeqManager\obj\Debug\NepgearsySeqManager.Main.resources
 C:\Users\timer\source\repos\NepgearsySeqManager\NepgearsySeqManager\obj\Debug\NepgearsySeqManager.Properties.Resources.resources
 C:\Users\timer\source\repos\NepgearsySeqManager\NepgearsySeqManager\obj\Debug\NepgearsySeqManager.csproj.GenerateResource.cache
 C:\Users\timer\source\repos\NepgearsySeqManager\NepgearsySeqManager\obj\Debug\NepgearsySeqManager.csproj.CoreCompileInputs.cache
-C:\Users\timer\source\repos\NepgearsySeqManager\NepgearsySeqManager\obj\Debug\NepgearsySeqManager.exe
-C:\Users\timer\source\repos\NepgearsySeqManager\NepgearsySeqManager\obj\Debug\NepgearsySeqManager.pdb
+C:\Users\timer\source\repos\NepgearsySeqManager\NepgearsySeqManager\obj\Debug\NepgearsySeqManager.About.resources
+C:\Users\timer\source\repos\NepgearsySeqManager\NepgearsySeqManager\bin\Debug\Nepgearsy Sequence Manager Generator.exe.config
+C:\Users\timer\source\repos\NepgearsySeqManager\NepgearsySeqManager\bin\Debug\Nepgearsy Sequence Manager Generator.exe
+C:\Users\timer\source\repos\NepgearsySeqManager\NepgearsySeqManager\bin\Debug\Nepgearsy Sequence Manager Generator.pdb
+C:\Users\timer\source\repos\NepgearsySeqManager\NepgearsySeqManager\obj\Debug\Nepgearsy Sequence Manager Generator.exe
+C:\Users\timer\source\repos\NepgearsySeqManager\NepgearsySeqManager\obj\Debug\Nepgearsy Sequence Manager Generator.pdb
